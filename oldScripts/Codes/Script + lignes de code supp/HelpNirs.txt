@@ -1,0 +1,71 @@
+job.fnc.hmrMotionCorrection
+
+r4=hmrMotionArtifact(raw, 7.8125, [])
+
+
+job=nirs.modules.xxxx
+r2=job.run(raw);
+r2.draw
+
+
+SubjStats.draw('tstat',[],'q<0.05')
+
+
+SubjStats.HRF
+SubjStats.HRF.gui
+
+
+%Compute GLM
+job = nirs.modules.GLM(job);
+job.basis = 'Canonical';
+glm = job.run(raw_trim);
+
+
+
+%Block average :
+
+
+
+
+%Plot Mean Block average :
+chan = size(BlockAVG2.data,2)./2;
+cond2 = BlockAVG2.data(:,:,2);
+
+figure;
+HbO_avg = mean([cond2(:,1+chan),cond2(:,2+chan),.....],nbre of channel);
+plot(HbO_avg);
+hold on;
+HbR_avg = mean([cond2(:,1+chan),cond2(:,2+chan),.....],nbre of channel);
+plot(HbR_avg);
+
+
+
+
+
+%Remove bad channels :
+
+job=nirs.modules.Run_HOMER2();
+job.fcn='hmrPruneChannels';
+job.vars.DISTminmax= ;
+job.vars.correspondTF= ;
+job.vars.ODrange= ;
+job.vars.SNRmax= ;
+
+
+%Define ROI manually
+source =  [1 2 2 3];
+detector= [1 1 2 2];
+ROI = table(source, detector);
+Result = nirs.util.roiAverage(GroupStats,ROI,'myROI');
+
+
+
+%Find peaks, its location and number of peaks in each row of a matrix
+for k1 = 1:size(BlockAVG2(s).data,2)
+    [pks,loc] = findpeaks(BlockAVG2(s).data(:,k1));
+    P{k1} = [pks; loc];
+end
+for k1 = 1:size(P,2)
+    NrPks(k1) = size(P{k1},2);
+end
+

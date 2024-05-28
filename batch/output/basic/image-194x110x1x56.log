@@ -1,0 +1,67 @@
+┌ Info: 2024-05-27 14:31:31 Starting DECAES v0.6.0 using Julia v1.10.3 with 8 threads
+└ @ DECAES C:\Users\bprigent\.julia\packages\DECAES\l29DC\src\main.jl:334
+┌ Info: 2024-05-27 14:31:32 Loading input file: C:/Users/bprigent/ProgrammeIRM/DECAES/mwiexamples/data/images/image-194x110x1x56.nii.gz
+└ @ DECAES C:\Users\bprigent\.julia\packages\DECAES\l29DC\src\utils.jl:321
+┌ Info: 2024-05-27 14:31:33 Done (0.99 seconds)
+└ @ DECAES C:\Users\bprigent\.julia\packages\DECAES\l29DC\src\utils.jl:325
+┌ Info: 2024-05-27 14:31:33 Running T2mapSEcorr on file: C:/Users/bprigent/ProgrammeIRM/DECAES/mwiexamples/data/images/image-194x110x1x56.nii.gz
+└ @ DECAES C:\Users\bprigent\.julia\packages\DECAES\l29DC\src\utils.jl:321
+┌ Info: 2024-05-27 14:31:33 T2-distribution analysis settings:
+│ * Chi2Factor       : nothing
+│ * legacy           : false
+│ * MatrixSize       : (194, 110, 1)
+│ * MinRefAngle      : 50.0
+│ * NoiseLevel       : nothing
+│ * nRefAngles       : 64
+│ * nRefAnglesMin    : 5
+│ * nT2              : 40
+│ * nTE              : 56
+│ * RefConAngle      : 180.0
+│ * Reg              : lcurve
+│ * SaveDecayCurve   : false
+│ * SaveNNLSBasis    : false
+│ * SaveRegParam     : false
+│ * SaveResidualNorm : false
+│ * SetFlipAngle     : nothing
+│ * Silent           : false
+│ * T1               : 1.0
+│ * T2Range          : (0.007, 2.0)
+│ * TE               : 0.007
+│ * Threaded         : true
+│ * Threshold        : 0.0
+└ @ DECAES C:\Users\bprigent\.julia\packages\DECAES\l29DC\src\T2mapSEcorr.jl:164
+┌ Info: 2024-05-27 14:31:44   42%[=====================>                             ]  ETA: 0:00:07
+└ @ DECAES C:\Users\bprigent\.julia\packages\DECAES\l29DC\src\utils.jl:312
+┌ Info: 2024-05-27 14:31:46  100%[===================================================] Time: 0:00:11
+└ @ DECAES C:\Users\bprigent\.julia\packages\DECAES\l29DC\src\utils.jl:312
+┌ Info: 2024-05-27 14:31:46 Done (13.19 seconds)
+└ @ DECAES C:\Users\bprigent\.julia\packages\DECAES\l29DC\src\utils.jl:325
+┌ Info: 2024-05-27 14:31:46 Saving T2 distribution to file: output/basic/image-194x110x1x56.t2dist.mat
+└ @ DECAES C:\Users\bprigent\.julia\packages\DECAES\l29DC\src\utils.jl:321
+┌ Info: 2024-05-27 14:31:46 Done (0.12 seconds)
+└ @ DECAES C:\Users\bprigent\.julia\packages\DECAES\l29DC\src\utils.jl:325
+┌ Info: 2024-05-27 14:31:46 Saving T2 parameter maps to file: output/basic/image-194x110x1x56.t2maps.mat
+└ @ DECAES C:\Users\bprigent\.julia\packages\DECAES\l29DC\src\utils.jl:321
+┌ Info: 2024-05-27 14:31:47 Done (0.26 seconds)
+└ @ DECAES C:\Users\bprigent\.julia\packages\DECAES\l29DC\src\utils.jl:325
+┌ Info: 2024-05-27 14:31:47 Running T2partSEcorr
+└ @ DECAES C:\Users\bprigent\.julia\packages\DECAES\l29DC\src\utils.jl:321
+┌ Info: 2024-05-27 14:31:47 T2-parts analysis settings:
+│ * legacy     : false
+│ * MatrixSize : (194, 110, 1)
+│ * MPWin      : (0.025, 0.2)
+│ * nT2        : 40
+│ * Sigmoid    : nothing
+│ * Silent     : false
+│ * SPWin      : (0.007, 0.025)
+│ * T2Range    : (0.007, 2.0)
+│ * Threaded   : true
+└ @ DECAES C:\Users\bprigent\.julia\packages\DECAES\l29DC\src\T2partSEcorr.jl:46
+┌ Info: 2024-05-27 14:31:47 Done (0.25 seconds)
+└ @ DECAES C:\Users\bprigent\.julia\packages\DECAES\l29DC\src\utils.jl:325
+┌ Info: 2024-05-27 14:31:47 Saving T2 parts maps to file: output/basic/image-194x110x1x56.t2parts.mat
+└ @ DECAES C:\Users\bprigent\.julia\packages\DECAES\l29DC\src\utils.jl:321
+┌ Info: 2024-05-27 14:31:47 Done (0.01 seconds)
+└ @ DECAES C:\Users\bprigent\.julia\packages\DECAES\l29DC\src\utils.jl:325
+┌ Info: 2024-05-27 14:31:47 Finished (15.8 seconds)
+└ @ DECAES C:\Users\bprigent\.julia\packages\DECAES\l29DC\src\main.jl:414
