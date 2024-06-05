@@ -1,38 +1,18 @@
-:: Script to use my version of monoexp
-:: Auteur: B. Prigent
-:: Creation: 07/05/24
-:: Last Maj: 07/05/24
+rem Script to collapse some omages
+rem Auteur: B. Prigent
+rem Creation: 07/05/24
+rem Last Maj: 29/05/24
 
 @echo off
 setlocal enabledelayedexpansion
 title animaConcatenateImages
 
+set DATASET=C:\\Users\\bprigent\\MyDatas\\TestFolder\\NODAL1Test
+
 animaConcatenateImages.exe ^
-    -i c:/Users/bprigent/Datas/NODALHV/relaxo/Dataset_NODAL_VS_001_489587_RELAXO_VHD_RELAXO_VHD_20240419133106/NODAL_VS_001_RELAXO_VHD_17_6_6.nii.gz ^
-    -i c:/Users/bprigent/Datas/NODALHV/relaxo/Dataset_NODAL_VS_001_489587_RELAXO_VHD_RELAXO_VHD_20240419133106/NODAL_VS_001_RELAXO_VHD_17_6_7.nii.gz ^
-    -i c:/Users/bprigent/Datas/NODALHV/relaxo/Dataset_NODAL_VS_001_489587_RELAXO_VHD_RELAXO_VHD_20240419133106/NODAL_VS_001_RELAXO_VHD_17_6_8.nii.gz ^
-    -i c:/Users/bprigent/Datas/NODALHV/relaxo/Dataset_NODAL_VS_001_489587_RELAXO_VHD_RELAXO_VHD_20240419133106/NODAL_VS_001_RELAXO_VHD_17_6_12.nii.gz ^
-    -i c:/Users/bprigent/Datas/NODALHV/relaxo/Dataset_NODAL_VS_001_489587_RELAXO_VHD_RELAXO_VHD_20240419133106/NODAL_VS_001_RELAXO_VHD_17_6_16.nii.gz ^
-    -i c:/Users/bprigent/Datas/NODALHV/relaxo/Dataset_NODAL_VS_001_489587_RELAXO_VHD_RELAXO_VHD_20240419133106/NODAL_VS_001_RELAXO_VHD_17_6_17.nii.gz ^
-    -i c:/Users/bprigent/Datas/NODALHV/relaxo/Dataset_NODAL_VS_001_489587_RELAXO_VHD_RELAXO_VHD_20240419133106/NODAL_VS_001_RELAXO_VHD_17_6_18.nii.gz ^
-    -i c:/Users/bprigent/Datas/NODALHV/relaxo/Dataset_NODAL_VS_001_489587_RELAXO_VHD_RELAXO_VHD_20240419133106/NODAL_VS_001_RELAXO_VHD_17_6_19.nii.gz ^
-    -i c:/Users/bprigent/Datas/NODALHV/relaxo/Dataset_NODAL_VS_001_489587_RELAXO_VHD_RELAXO_VHD_20240419133106/NODAL_VS_001_RELAXO_VHD_17_6_20.nii.gz ^
-    -i c:/Users/bprigent/Datas/NODALHV/relaxo/Dataset_NODAL_VS_001_489587_RELAXO_VHD_RELAXO_VHD_20240419133106/NODAL_VS_001_RELAXO_VHD_17_6_21.nii.gz ^
-    -i c:/Users/bprigent/Datas/NODALHV/relaxo/Dataset_NODAL_VS_001_489587_RELAXO_VHD_RELAXO_VHD_20240419133106/NODAL_VS_001_RELAXO_VHD_17_6_23.nii.gz ^
-    -i c:/Users/bprigent/Datas/NODALHV/relaxo/Dataset_NODAL_VS_001_489587_RELAXO_VHD_RELAXO_VHD_20240419133106/NODAL_VS_001_RELAXO_VHD_17_6_24.nii.gz ^
-    -i c:/Users/bprigent/Datas/NODALHV/relaxo/Dataset_NODAL_VS_001_489587_RELAXO_VHD_RELAXO_VHD_20240419133106/NODAL_VS_001_RELAXO_VHD_17_6_25.nii.gz ^
-    -i c:/Users/bprigent/Datas/NODALHV/relaxo/Dataset_NODAL_VS_001_489587_RELAXO_VHD_RELAXO_VHD_20240419133106/NODAL_VS_001_RELAXO_VHD_17_6_26.nii.gz ^
-    -i c:/Users/bprigent/Datas/NODALHV/relaxo/Dataset_NODAL_VS_001_489587_RELAXO_VHD_RELAXO_VHD_20240419133106/NODAL_VS_001_RELAXO_VHD_17_6_27.nii.gz ^
-    -i c:/Users/bprigent/Datas/NODALHV/relaxo/Dataset_NODAL_VS_001_489587_RELAXO_VHD_RELAXO_VHD_20240419133106/NODAL_VS_001_RELAXO_VHD_17_6_29.nii.gz ^
-    -i c:/Users/bprigent/Datas/NODALHV/relaxo/Dataset_NODAL_VS_001_489587_RELAXO_VHD_RELAXO_VHD_20240419133106/NODAL_VS_001_RELAXO_VHD_17_6_30.nii.gz ^
-    -i c:/Users/bprigent/Datas/NODALHV/relaxo/Dataset_NODAL_VS_001_489587_RELAXO_VHD_RELAXO_VHD_20240419133106/NODAL_VS_001_RELAXO_VHD_17_6_31.nii.gz ^
-    -i c:/Users/bprigent/Datas/NODALHV/relaxo/Dataset_NODAL_VS_001_489587_RELAXO_VHD_RELAXO_VHD_20240419133106/NODAL_VS_001_RELAXO_VHD_17_6_34.nii.gz ^
-    -i c:/Users/bprigent/Datas/NODALHV/relaxo/Dataset_NODAL_VS_001_489587_RELAXO_VHD_RELAXO_VHD_20240419133106/NODAL_VS_001_RELAXO_VHD_17_6_36.nii.gz ^
-    -i c:/Users/bprigent/Datas/NODALHV/relaxo/Dataset_NODAL_VS_001_489587_RELAXO_VHD_RELAXO_VHD_20240419133106/NODAL_VS_001_RELAXO_VHD_17_6_40.nii.gz ^
-    -i c:/Users/bprigent/Datas/NODALHV/relaxo/Dataset_NODAL_VS_001_489587_RELAXO_VHD_RELAXO_VHD_20240419133106/NODAL_VS_001_RELAXO_VHD_17_6_41.nii.gz ^
-    -i c:/Users/bprigent/Datas/NODALHV/relaxo/Dataset_NODAL_VS_001_489587_RELAXO_VHD_RELAXO_VHD_20240419133106/NODAL_VS_001_RELAXO_VHD_17_6_44.nii.gz ^
-    -i c:/Users/bprigent/Datas/NODALHV/relaxo/Dataset_NODAL_VS_001_489587_RELAXO_VHD_RELAXO_VHD_20240419133106/NODAL_VS_001_RELAXO_VHD_17_6_45.nii.gz ^
-    -o c:/users/bprigent/Desktop/collapse.nii.gz
+     -i C:\\Users\\bprigent\\MyDatas\\TestFolder\\NODAL1Test\\NODAL_01_masked.nii.gz ^
+     -i C:\\Users\\bprigent\\MyDatas\\TestFolder\\NODAL1Test\\NODAL_02_masked.nii.gz ^
+     -o %DATASET%\\Concatenated.nii.gz
 
 pause 
 echo 

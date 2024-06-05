@@ -1,7 +1,7 @@
-:: Script to use my version of GMMT
-:: Auteur: B. Prigent
-:: Creation: 06/05/24
-:: Last Maj: 06/05/24
+rem Script to use GMMT2
+rem Auteur: B. Prigent
+rem Creation: 06/05/24
+rem Last Maj: 29/05/24
 
 @echo off
 setlocal enabledelayedexpansion

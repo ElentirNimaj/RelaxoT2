@@ -1,7 +1,7 @@
-:: Recherche de dossier spécifique
-:: Auteur: B. Prigent
-:: Creation: 06/05/24
-:: Last Maj: 06/05/24
+rem Recherche de dossier spécifique et tests divers
+rem Auteur: B. Prigent
+rem Creation: 06/05/24
+rem Last Maj: 06/05/24
 
 @echo off
 

@@ -1,7 +1,7 @@
-:: Script to use my version of monoexp
-:: Auteur: B. Prigent
-:: Creation: 07/05/24
-:: Last Maj: 07/05/24
+rem Script to use animaT2EPG for Recon datas
+rem Auteur: B. Prigent
+rem Creation: 07/05/24
+rem Last Maj: 29/05/24
 
 @echo off
 setlocal enabledelayedexpansion
