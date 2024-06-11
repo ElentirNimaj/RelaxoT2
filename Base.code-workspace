@@ -1,0 +1,33 @@
+{
+	"folders": [
+		{
+			"name": "Notes",
+			"path": "../Documents/Notes"
+		},
+		{
+			"name": "d",
+			"path": "../../../d"
+		},
+		{
+			"name": "MyScript",
+			"path": "."
+		},
+		{
+			"name": "MyProcess",
+			"path": "../MyProcess"
+		},
+		{
+			"name": "MyDatas",
+			"path": "../MyDatas"
+		},
+		{
+			"name": "MyResults",
+			"path": "../MyResults"
+		},
+		{
+			"name": "MyVisulalisers",
+			"path": "../MyVisulalisers"
+		}
+	],
+	"settings": {}
+}
