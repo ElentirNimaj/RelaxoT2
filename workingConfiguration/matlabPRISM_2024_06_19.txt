@@ -1,0 +1,54 @@
+Config file of the 19-Jun-2024 PRISM Computation
+
+clear;
+clc;
+
+%% 1- Variables
+
+dlta = [7,250,500,1000,250,500,125,250,0,0,250];
+bta = [0.4,1.5,3,6,3,1.5,1.5,6,0,3,0];
+basePath = 'C:\Users\bprigent\MyResults\PRISM\C2PIHP\ComparaisonBtaDel\C2PIHP_';
+
+% nom du répertoire où se situent les fichiers fonction .p
+path_functions = 'C:\Users\bprigent\Documents\MATLAB\PRISM\pFilePRISM\';
+
+% nom du repertoire où se situent les images dcm
+rep_dcm='C:\Users\bprigent\MyDatas\RECONDCM\C2PIHP';
+
+%nom du fichier representant le masque  (format png ok)
+nom_masque='C:\Users\bprigent\MyDatas\RECONDCMMask.png';
+
+%nombre d'iterations maximal
+NB_ITER_MAX=200;
+
+Nc=3;  %nombre de composantes
+A0=[0.2 0.5 0.3]; %valeurs initiales en proportion
+T2=[15 70 1800]; % valeurs initiales en ms
+
+bruit=22/sqrt(pi/2); % moyenne du fond divisée par sqrt(pi/2);
+
+p=genpath(path_functions);
+addpath(p,'-begin');
+%% 2- Computation
+
+for count=1:length(dlta)
+    bet=bta(count);
+    del=dlta(count);
+    nameBta = strcat('bta',strrep(num2str(bet),'.','_'));
+    nameDlta = strcat('_dlta',num2str(del));
+    
+    %nom du repertoire resultat
+    rep_res=strcat(basePath,nameBta,nameDlta);
+
+    %nom racine des fichiers resultats
+    nom_res=strcat('C2PIHP_',nameBta,nameDlta);
+
+    try
+        mkdir(rep_res)
+    catch FileExistsError
+        warning('Folder already exists')
+    end
+
+    fonction_estimation(rep_dcm,rep_res,nom_res,Nc,A0,T2,nom_masque,bet,del,bruit,NB_ITER_MAX);
+    clear bet del nameBta nameDlta nom_res rep_res
+    end
